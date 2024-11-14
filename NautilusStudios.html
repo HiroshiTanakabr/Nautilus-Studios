@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nautilus Studios - Design Gráfico e Desenvolvimento Web">
+    <meta name="author" content="Nautilus Studios">
+    <meta name="keywords" content="Design Gráfico, Desenvolvimento Web, Modelagem 3D, OST">
+    <title>Nautilus Studios</title>
+    <style>
+        /* Reset de estilo e configurações globais */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* Cabeçalho */
+        
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            color: #333;
+            font-size: 3rem;
+        }
+        
+        header p {
+            color: #555;
+        }
+        /* Barra de navegação */
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        
+        nav a {
+            color: #fff;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #555;
+        }
+        /* Página de conteúdo */
+        
+        .page {
+            display: none;
+            padding: 50px 20px;
+        }
+        
+        section {
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            margin: 20px auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+        /* Formulários */
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        input,
+        textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+        }
+        
+        button,
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover,
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        /* Rodapé */
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        /* Responsividade */
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            nav a {
+                padding: 12px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Nautilus Studios</h1>
+        <p>Design Gráfico, Desenvolvimento Web, Modelagem 3D & OST</p>
+    </header>
+
+    <!-- Barra de Navegação -->
+    <nav>
+        <a href="javascript:void(0)" onclick="showPage('home')">Home</a>
+        <a href="javascript:void(0)" onclick="showPage('services')">Serviços</a>
+        <a href="javascript:void(0)" onclick="showPage('quote')">Orçamento</a>
+        <a href="javascript:void(0)" onclick="showPage('contact')">Contato</a>
+    </nav>
+
+    <!-- Páginas Dinâmicas -->
+    <div id="home" class="page">
+        <section class="intro">
+            <h2>Bem-vindo ao Nautilus Studios!</h2>
+            <p>Somos especialistas em design gráfico, desenvolvimento web, modelagem 3D e criação de OSTs. Nossos serviços são feitos sob medida para atender às suas necessidades, com qualidade e criatividade.</p>
+            <a href="javascript:void(0)" onclick="showPage('services')" class="button">Veja Nossos Serviços</a>
+        </section>
+    </div>
+
+    <div id="services" class="page">
+        <section class="services-section">
+            <h2>Serviços</h2>
+            <div class="service">
+                <h3>Design Gráfico</h3>
+                <p>Criamos soluções visuais criativas para sua marca e identidade, desde logotipos até materiais de marketing.</p>
+            </div>
+            <div class="service">
+                <h3>Desenvolvimento Web</h3>
+                <p>Construímos sites e aplicações dinâmicas, modernas e responsivas, com foco em performance e experiência do usuário.</p>
+            </div>
+            <div class="service">
+                <h3>Modelagem 3D</h3>
+                <p>Modelagem de objetos, ambientes e animações 3D para diversos projetos, com detalhes realistas e de alta qualidade.</p>
+            </div>
+        </section>
+    </div>
+
+    <div id="quote" class="page">
+        <section class="quote-section">
+            <h2>Solicite seu Orçamento</h2>
+            <form action="https://formsubmit.co/hiroshitobr@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+                <input type="text" name="service" placeholder="Serviço Solicitado" required>
+                <textarea name="message" placeholder="Descrição do Projeto" rows="5" required></textarea>
+                <button type="submit">Enviar Orçamento</button>
+            </form>
+        </section>
+    </div>
+
+    <div id="contact" class="page">
+        <section class="contact-section">
+            <h2>Fale Conosco</h2>
+            <form action="https://formsubmit.co/hiroshitobr@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu E-mail" required>
+                <textarea name="message" placeholder="Sua Mensagem" rows="5" required></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Nautilus Studios | <a href="mailto:hiroshitobr@gmail.com" style="color: #fff;">Contate-nos</a></p>
+    </footer>
+
+    <script>
+        // Função para exibir a página selecionada
+        function showPage(page) {
+            // Ocultar todas as páginas
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(p => p.style.display = 'none');
+
+            // Exibir a página correspondente
+            document.getElementById(page).style.display = 'block';
+        }
+
+        // Exibir a página inicial por padrão
+        showPage('home');
+    </script>
+
+</body>
+
+</html>
